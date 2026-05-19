@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://financeyou.com.au/sitemap.xml
+
+# Block access to any admin or private paths (if added later)
+# Disallow: /admin/
+# Disallow: /private/
