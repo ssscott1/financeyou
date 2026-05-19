@@ -266,17 +266,25 @@ function initLeadForm(formId) {
 
     if (!allValid) return;
 
-    // Simulate submission
     const submitBtn = form.querySelector('[type="submit"]');
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.textContent = 'Submitting…';
     }
 
-    setTimeout(function () {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    })
+    .then(function () {
       form.classList.add('hidden');
       if (successEl) successEl.classList.add('visible');
-    }, 800);
+    })
+    .catch(function () {
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Get My Free Quote'; }
+      alert('There was an error submitting your enquiry. Please call us on 1300 989 282.');
+    });
   });
 }
 

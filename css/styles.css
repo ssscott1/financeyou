@@ -1,13 +1,13 @@
 /* Finance You — Custom Styles */
-/* Colours: Deep Navy #1e3a5f | Amber #f59e0b | Sky Blue #0ea5e9 */
+/* Colours: Brand Purple #3c3566 | Brand Amber #f09528 | Sky Blue #0ea5e9 */
 
 :root {
-  --navy: #1e3a5f;
-  --navy-dark: #152c47;
-  --navy-light: #2a4f7c;
-  --amber: #f59e0b;
-  --amber-dark: #d97706;
-  --amber-light: #fcd34d;
+  --navy: #3c3566;
+  --navy-dark: #2d2651;
+  --navy-light: #524b7a;
+  --amber: #f09528;
+  --amber-dark: #d4811e;
+  --amber-light: #f9bc6e;
   --sky: #0ea5e9;
   --sky-dark: #0284c7;
   --white: #ffffff;
@@ -74,11 +74,11 @@ p:last-child { margin-bottom: 0; }
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--navy);
-  box-shadow: 0 2px 12px rgba(0,0,0,.25);
-  transition: background .3s;
+  background: var(--white);
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  transition: box-shadow .3s;
 }
-#site-header.scrolled { background: var(--navy-dark); }
+#site-header.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,.12); }
 
 .header-inner {
   display: flex;
@@ -94,33 +94,26 @@ p:last-child { margin-bottom: 0; }
 .site-logo {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
   flex-shrink: 0;
 }
-.site-logo .logo-icon {
-  width: 40px;
-  height: 40px;
-  background: var(--amber);
-  border-radius: 8px;
+.site-logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+/* Footer text logo (dark background) */
+.footer-logo-text {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.site-logo .logo-icon svg { width: 24px; height: 24px; fill: var(--navy); }
-.site-logo .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
-.site-logo .logo-text span:first-child {
-  font-size: 1.125rem;
+  align-items: baseline;
+  gap: 0;
+  font-size: 1.5rem;
   font-weight: 800;
-  color: var(--white);
+  line-height: 1;
   letter-spacing: -.02em;
+  margin-bottom: .75rem;
 }
-.site-logo .logo-text span:last-child {
-  font-size: 0.65rem;
-  font-weight: 500;
-  color: var(--amber);
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
+.footer-logo-text .fl-finance { color: var(--white); }
+.footer-logo-text .fl-you { color: var(--amber); }
 
 /* Desktop Nav */
 .main-nav { display: flex; align-items: center; gap: 0.25rem; }
@@ -130,9 +123,9 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   align-items: center;
   gap: 4px;
-  color: rgba(255,255,255,.88);
+  color: var(--gray-700);
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0.5rem 0.75rem;
   border-radius: var(--radius);
   border: none;
@@ -141,12 +134,11 @@ p:last-child { margin-bottom: 0; }
   white-space: nowrap;
 }
 .main-nav > li > a:hover,
-.main-nav > li > button:hover,
-.main-nav > li > a.active {
-  color: var(--amber);
-  background: rgba(255,255,255,.06);
+.main-nav > li > button:hover {
+  color: var(--navy);
+  background: var(--gray-100);
 }
-.main-nav > li > a.active { color: var(--amber-light); }
+.main-nav > li > a.active { color: var(--navy); font-weight: 700; }
 
 /* Dropdown */
 .nav-dropdown {
@@ -208,12 +200,12 @@ p:last-child { margin-bottom: 0; }
   display: none;
   background: none;
   border: none;
-  color: white;
+  color: var(--navy);
   padding: 6px;
   border-radius: var(--radius);
   transition: background .2s;
 }
-.mobile-menu-btn:hover { background: rgba(255,255,255,.1); }
+.mobile-menu-btn:hover { background: var(--gray-100); }
 .mobile-menu-btn svg { width: 24px; height: 24px; }
 
 /* Mobile Nav Drawer */
@@ -271,7 +263,7 @@ p:last-child { margin-bottom: 0; }
 
 /* ─── Hero ─── */
 .hero {
-  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, #1a3a5e 100%);
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, #45406e 100%);
   position: relative;
   overflow: hidden;
   padding: 5rem 0 4rem;
@@ -281,8 +273,8 @@ p:last-child { margin-bottom: 0; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 70% 50%, rgba(14,165,233,.12) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(245,158,11,.08) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 60% at 70% 50%, rgba(240,149,40,.1) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(240,149,40,.06) 0%, transparent 60%);
   pointer-events: none;
 }
 .hero-inner {
@@ -926,7 +918,7 @@ input[type="range"]::-moz-range-thumb {
 
 /* ─── Page Hero (inner pages) ─── */
 .page-hero {
-  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #1a3a5e 100%);
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #45406e 100%);
   padding: 4rem 0 3.5rem;
   position: relative;
   overflow: hidden;

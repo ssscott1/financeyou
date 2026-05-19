@@ -92,13 +92,7 @@
   <div class="header-inner">
     <!-- Logo -->
     <a href="index.html" class="site-logo" aria-label="Finance You — Home">
-      <div class="logo-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-      </div>
-      <div class="logo-text">
-        <span>Finance You</span>
-        <span>Finance Broker</span>
-      </div>
+      <img src="images/logo.png" alt="Finance You" class="site-logo-img">
     </a>
 
     <!-- Desktop Navigation -->
@@ -208,7 +202,8 @@
           <h4>✓ Thank you!</h4>
           <p>A Finance You specialist will contact you within 2 business hours.</p>
         </div>
-        <form id="hero-form" novalidate>
+        <form id="hero-form" netlify netlify novalidate>
+          <input type="hidden" name="form-name" value="homepage-quote">
           <div class="form-row">
             <div class="form-group">
               <label for="hero-first-name">First Name *</label>
@@ -680,10 +675,9 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="site-logo" style="margin-bottom:.75rem" aria-label="Finance You home">
-          <div class="logo-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#1e3a5f" stroke-width="2"/></svg></div>
-          <div class="logo-text"><span>Finance You</span><span>Finance Broker</span></div>
-        </a>
+        <a href="index.html" class="site-logo" aria-label="Finance You — Home">
+      <img src="images/logo.png" alt="Finance You" class="site-logo-img">
+    </a>
         <p>Finance You is an Australian credit licence holder (ACL 383122) providing equipment finance, commercial finance, car and truck loans, and personal finance to individuals and businesses across Australia since 2015.</p>
         <div class="footer-contact">
           <a href="tel:1300989282" aria-label="Call us on 1300 989 282">
