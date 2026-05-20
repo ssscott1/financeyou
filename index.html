@@ -166,111 +166,33 @@
   <!-- ─── Hero ─── -->
   <section class="hero" aria-label="Hero">
     <div class="hero-inner">
-      <!-- Left: Headline -->
-      <div>
-        <div class="hero-badge" aria-label="Trusted Australian broker">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          Trusted Australian Broker Since 2015
-        </div>
-        <h1>Australia's <span>Trusted</span><br>Finance Broker</h1>
-        <p class="hero-sub">Access 40+ lenders to find the best rate for equipment finance, car loans, truck finance, commercial lending and personal loans — all in one place.</p>
-        <div class="hero-trust">
-          <span class="trust-item">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            40+ Lenders
-          </span>
-          <span class="trust-item">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            Fast Approvals
-          </span>
-          <span class="trust-item">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            No Obligation Quote
-          </span>
-          <span class="trust-item">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            ACL 383122
-          </span>
-        </div>
+      <div class="hero-badge" aria-label="Trusted Australian broker">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Trusted Australian Broker Since 2015
       </div>
-
-      <!-- Right: Quick Quote Form -->
-      <div class="hero-form-card">
-        <h3>Get Your Free Quote</h3>
-        <p>No obligation · Response within 2 business hours</p>
-        <div class="form-success" role="alert">
-          <h4>✓ Thank you!</h4>
-          <p>A Finance You specialist will contact you within 2 business hours.</p>
-        </div>
-        <form id="hero-form" netlify netlify novalidate>
-          <input type="hidden" name="form-name" value="homepage-quote">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="hero-first-name">First Name *</label>
-              <input type="text" id="hero-first-name" name="first_name" required autocomplete="given-name" placeholder="John">
-              <span class="form-error" role="alert"></span>
-            </div>
-            <div class="form-group">
-              <label for="hero-last-name">Last Name *</label>
-              <input type="text" id="hero-last-name" name="last_name" required autocomplete="family-name" placeholder="Smith">
-              <span class="form-error" role="alert"></span>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="hero-phone">Phone *</label>
-            <input type="tel" id="hero-phone" name="phone" required autocomplete="tel" placeholder="0400 000 000">
-            <span class="form-error" role="alert"></span>
-          </div>
-          <div class="form-group">
-            <label for="hero-email">Email *</label>
-            <input type="email" id="hero-email" name="email" required autocomplete="email" placeholder="john@example.com.au">
-            <span class="form-error" role="alert"></span>
-          </div>
-          <div class="form-group">
-            <label for="hero-finance-type">Finance Type *</label>
-            <select id="hero-finance-type" name="finance_type" required>
-              <option value="">Select Finance Type…</option>
-              <option value="equipment">Equipment Finance</option>
-              <option value="commercial">Commercial Finance</option>
-              <option value="car">Car Finance</option>
-              <option value="truck">Truck / Heavy Vehicle Finance</option>
-              <option value="personal">Personal Loan</option>
-              <option value="asset">Asset Finance</option>
-            </select>
-            <span class="form-error" role="alert"></span>
-          </div>
-          <div class="form-group asset-type-group hidden">
-            <label for="hero-asset-type">Asset Type</label>
-            <select id="hero-asset-type" name="asset_type">
-              <option value="">Select Asset Type…</option>
-              <option value="construction">Construction Equipment</option>
-              <option value="agricultural">Agricultural Equipment</option>
-              <option value="medical">Medical Equipment</option>
-              <option value="it">IT / Technology</option>
-              <option value="vehicles">Vehicles</option>
-              <option value="manufacturing">Manufacturing Equipment</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="hero-amount">Amount Needed *</label>
-            <select id="hero-amount" name="amount" required>
-              <option value="">Select Amount…</option>
-              <option value="under-20k">Under $20,000</option>
-              <option value="20-50k">$20,000 – $50,000</option>
-              <option value="50-100k">$50,000 – $100,000</option>
-              <option value="100-250k">$100,000 – $250,000</option>
-              <option value="250-500k">$250,000 – $500,000</option>
-              <option value="500k-plus">$500,000+</option>
-            </select>
-            <span class="form-error" role="alert"></span>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full btn-lg">
-            Get My Free Quote
-            <svg viewBox="0 0 20 20" fill="currentColor" style="width:18px;height:18px"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"/></svg>
-          </button>
-          <p style="font-size:.7rem;color:#888;text-align:center;margin-top:.75rem;">By submitting you agree to our <a href="privacy-policy.html" style="color:#0ea5e9">Privacy Policy</a>. We never share your details.</p>
-        </form>
+      <h1>Australia's <span>Trusted</span><br>Finance Broker</h1>
+      <p class="hero-sub">Access 40+ lenders to find the best rate for equipment finance, car loans, truck finance, commercial lending and personal loans — all in one place.</p>
+      <div class="hero-trust">
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          40+ Lenders
+        </span>
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Fast Approvals
+        </span>
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          No Obligation Quote
+        </span>
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          ACL 383122
+        </span>
+      </div>
+      <div class="hero-ctas">
+        <a href="contact.html" class="btn btn-primary btn-lg">Get a Free Quote →</a>
+        <a href="#calculator" class="btn btn-hero-outline btn-lg">Calculate Repayments</a>
       </div>
     </div>
   </section>
