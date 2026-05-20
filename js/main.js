@@ -132,8 +132,6 @@
   const termBtns = calc.querySelectorAll('.term-btn');
   const rateDisplay = calc.querySelector('#calc-rate-display');
   const monthlyDisplay = calc.querySelector('#calc-monthly');
-  const totalInterestDisplay = calc.querySelector('#calc-total-interest');
-  const totalAmountDisplay = calc.querySelector('#calc-total-amount');
 
   function formatCurrency(val) {
     return '$' + Math.round(val).toLocaleString('en-AU');
@@ -149,13 +147,9 @@
   function updateCalc() {
     const rate = RATES[currentType] || 7.99;
     const monthly = calculateRepayment(loanAmount, rate, termYears);
-    const total = monthly * termYears * 12;
-    const interest = total - loanAmount;
 
     if (rateDisplay) rateDisplay.innerHTML = 'Indicative rate from <strong>' + rate.toFixed(2) + '% p.a.</strong>';
     if (monthlyDisplay) monthlyDisplay.textContent = formatCurrency(monthly);
-    if (totalInterestDisplay) totalInterestDisplay.textContent = formatCurrency(interest);
-    if (totalAmountDisplay) totalAmountDisplay.textContent = formatCurrency(total);
 
     // Update slider fill
     if (amountSlider) {
